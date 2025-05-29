@@ -41,24 +41,28 @@ Resto: 2
 
 Para cada archivo `.asm`, ejecutar desde terminal:
 
-## Ejercicio1
+### Ejercicio1
 
 ```bash
 nasm -f elf32 Resta_Enteros.asm -o Resta_Enteros.o
 ld -m elf_i386 -o Resta_Enteros Resta_Enteros.o
 ./Resta_Enteros
 
-## Ejercicio2
+```
+
+### Ejercicio2
 
 ```bash
 nasm -f elf32 Multiplicacion_Enteros.asm -o Multiplicacion_Enteros.o
 ld -m elf_i386 -o Multiplicacion_Enteros Multiplicacion_Enteros.o
 ./Multiplicacion_Enteros
 
-## Ejercicio3
+```
+
+### Ejercicio3
 ```bash
 nasm -f elf32 Division_Enteros.asm -o Division_Enteros.o
 ld -m elf_i386 -o Division_Enteros Division_Enteros.o
 ./Division_Enteros
 
----
+```
