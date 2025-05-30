@@ -1,16 +1,16 @@
-section .data
-    num1 db 5               ; Primer número (8 bits)
-    num2 db 3               ; Segundo número (8 bits)
-    msg db "Resultado: "    ; Mensaje sin salto de línea
+section .data               ; GC23100 
+    num1 db 5               ; Primer numero (8 bits)
+    num2 db 3               ; Segundo numero (8 bits)
+    msg db "Resultado: "    ; Mensaje
     msg_len equ $ - msg
-    salto db 0xA            ; Salto de línea
-    buffer times 4 db 0     ; Máximo 3 dígitos + nulo
+    salto db 0xA            ; Salto de linea
+    buffer times 4 db 0     ; Maximo 3 digitos + nulo
 
 section .text
     global _start
 
 _start:
-    ; Multiplicación con registros de 8 bits
+    ; Multiplicacion con registros de 8 bits
     mov al, [num1]          ; al = num1
     mov bl, [num2]          ; bl = num2
     mul bl                  ; al * bl → resultado en AX
@@ -37,15 +37,15 @@ _start:
     mov edx, msg_len
     int 0x80
 
-    ; Imprimir número convertido
+    ; Imprimir numero convertido
     mov eax, 4
     mov ebx, 1
-    mov ecx, esi           ; inicio del número en buffer
+    mov ecx, esi           ; inicio del numero en buffer
     mov edx, buffer + 4
-    sub edx, esi           ; longitud del número
+    sub edx, esi           ; longitud del numero
     int 0x80
 
-    ; Imprimir salto de línea
+    ; Imprimir salto de linea
     mov eax, 4
     mov ebx, 1
     mov ecx, salto

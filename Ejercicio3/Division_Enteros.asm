@@ -66,7 +66,7 @@ imprimir_numero:
     test eax, eax
     jnz .convertir
 
-    ; Imprimir número convertido
+    ; Imprimir numero convertido
     mov eax, 4
     mov ebx, 1
     mov ecx, edi
@@ -74,7 +74,7 @@ imprimir_numero:
     sub edx, edi
     int 0x80
 
-    ; Salto de línea
+    ; Salto de linea
     mov eax, 4
     mov ebx, 1
     mov ecx, salto

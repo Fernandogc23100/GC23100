@@ -5,13 +5,3 @@
 Resta_Enteros
 Multiplicacion
 Division_Enteros
-
-# Si decides usar nombres diferentes para ejecutables, ignóralos así:
-Ejercicio1/*
-!Ejercicio1/*.asm
-
-Ejercicio2/*
-!Ejercicio2/*.asm
-
-Ejercicio3/*
-!Ejercicio3/*.asm
